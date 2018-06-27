@@ -107,7 +107,7 @@ class LoginController extends Controller
 
 
         // $newvar = dd($userSocial);
-        return view($userSocial1);
+        return view(dd($userSocial1));
     }
 
 }
