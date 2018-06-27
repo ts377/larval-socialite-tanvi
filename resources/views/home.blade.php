@@ -15,7 +15,12 @@
                     @endif
 
                     You are logged in!
+
+                        $userSocial = Socialite::driver('facebook')->stateless()->user();
+                        dd($userSocial);
                 </div>
+                
+
             </div>
         </div>
     </div>
