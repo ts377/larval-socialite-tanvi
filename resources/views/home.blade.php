@@ -33,7 +33,7 @@
 
 
                     You are logged in!
-                        nl2br('Your Name')
+                        {{nl2br('Your Name  ')}}
                        {{ Auth::user()->name}}
 
                         {{ Auth::user()->email }}
