@@ -77,8 +77,8 @@ class LoginController extends Controller
             'name' => $userSocial->user['name'],
             'email' => $userSocial->user['email'],
             'password' => Hash::make('1234'),
-            'avatar' => $userSocial->avatar_original,
-           // 'facebook_profile' => $userSocial->profileUrl,
+            'avatar' => $userSocial->getAvatar()->nullable(),
+           'facebook_profile' => $userSocial->profileUrl->nullable(),
            // 'gender' => $userSocial->user['gender'],
         ]);
 

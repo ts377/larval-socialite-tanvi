@@ -40,7 +40,7 @@
                         {{ nl2br(e('Your Facebook Avatar: ')) }}
                         {{ Auth::user()->avatar }}
 
-                  
+
 
 
                 </div>
