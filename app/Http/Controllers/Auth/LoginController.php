@@ -9,6 +9,7 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\view\view;
+use File;
 
 class LoginController extends Controller
 {
@@ -60,7 +61,10 @@ class LoginController extends Controller
     public function handleProviderCallback()
     {
         $userSocial = Socialite::driver('facebook')->stateless()->user();
-        $userSocial->getAvatar();
+
+
+        $fileContents = file_get_contents($userSocial->getAvatar());
+        File::put(public_path() . '/uploads/profile/' . $userSocial->getId() . ".jpg", $fileContents);
 
         // check if user exists and log user in
 
@@ -77,6 +81,7 @@ class LoginController extends Controller
             'name' => $userSocial->user['name'],
             'email' => $userSocial->user['email'],
             'password' => Hash::make('1234'),
+
 
            //'facebook_profile' => $userSocial->profileUrl,
            // 'gender' => $userSocial->user['gender'],

@@ -38,9 +38,9 @@
                         {{ nl2br(e('   Your Email ID:  ')) }}
                         {{ Auth::user()->email }}
                         {{ nl2br(e('Your Facebook Avatar: ')) }}
-                        {{ Auth::user()->avatar }}
-                        
-                        <img src="{{ Auth::user()->avatar_url }}" alt="Facebook Avatar" height="64" width="64">
+
+                        $picture = public_path('uploads/profile/' . $user->getId() . ".jpg");
+
 
 
 
