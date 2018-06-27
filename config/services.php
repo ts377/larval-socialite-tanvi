@@ -37,7 +37,7 @@ return [
     'facebook' => [
         'client_id' => '246690679449371',         // Your facebook Client ID
         'client_secret' => '0467c2c15061e50d7acd2c3936a8098f', // Your facebook Client Secret
-        'redirect' => 'http://localhost:8000/login/facebook/callback',
+        'redirect' => 'https://laravel-socialite-tanvi.herokuapp.com/login/facebook/callback',
     ],
 
 ];
