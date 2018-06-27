@@ -15,7 +15,12 @@
                     @endif
 
 
-@php($userSocial = Socialite::driver('facebook')->stateless()->user();
+@php(
+use Socialite;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+$userSocial = Socialite::driver('facebook')->stateless()->user();
                         dd($userSocial);)
                     <div>You are logged in!</div>
                   @endphp
