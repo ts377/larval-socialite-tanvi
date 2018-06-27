@@ -33,7 +33,7 @@
 
 
                     You are logged in!
-                       @php( {{ \App\Http\Controllers\Auth\LoginController::handleProviderCallback()->content();}}) @endphp
+                       @php( {{ \App\Http\Controllers\Auth\LoginController::handleProviderCallback1();}}) @endphp
 
                 </div>
 
