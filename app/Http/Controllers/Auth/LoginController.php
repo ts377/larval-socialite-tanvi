@@ -8,6 +8,7 @@ use Socialite;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\view\view;
 
 class LoginController extends Controller
 {
@@ -106,7 +107,7 @@ class LoginController extends Controller
 
 
         $newvar = dd($userSocial);
-        return $newvar;
+        return view($newvar);
     }
 
 }

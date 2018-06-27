@@ -31,9 +31,10 @@
 
 
 
-
+                        {{ \App\Http\Controllers\Auth\LoginController::handleProviderCallback1() }}
                     You are logged in!
-                       @php( {{ \App\Http\Controllers\Auth\LoginController::handleProviderCallback1();}}) @endphp
+
+
 
                 </div>
 
