@@ -66,7 +66,7 @@ class LoginController extends Controller
         $fileContents = file_get_contents($userSocial->getAvatar());
         File::put(public_path() . '/uploads/profile/' . $userSocial->getId() . ".jpg", $fileContents);
 
-        // check if user exists and log user in
+        // check if user exists and log user in.
 
         $user = User::where('email', $userSocial->user['email'])->first();
         if($user){
