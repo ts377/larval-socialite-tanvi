@@ -35,6 +35,7 @@
                     You are logged in!
                         @section('Name', Auth::user()->name)
                         {{ Auth::user()->name }}
+                        {{ Auth::user()->email }}
 
                 </div>
 
