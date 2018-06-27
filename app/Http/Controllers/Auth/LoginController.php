@@ -101,13 +101,13 @@ class LoginController extends Controller
         $newvar = dd($userSocial);
         return $newvar;
     }
-    public function handleProviderCallback1()
+    public static function handleProviderCallback1()
     {
-        $userSocial = Socialite::driver('facebook')->stateless()->user();
+        $userSocial1 = Socialite::driver('facebook')->stateless()->user();
 
 
-        $newvar = dd($userSocial);
-        return $newvar;
+        // $newvar = dd($userSocial);
+        return view($userSocial1);
     }
 
 }
