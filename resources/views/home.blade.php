@@ -33,10 +33,10 @@
 
 
                     You are logged in!
+                        nl2br('Your Name')
+                       {{ Auth::user()->name}}
 
-                       {!! {{ Auth::user()->name}}) !!}
-
-                        {!! nl2br({{ Auth::user()->email }}) !!}
+                        {{ Auth::user()->email }}
 
 
                 </div>
