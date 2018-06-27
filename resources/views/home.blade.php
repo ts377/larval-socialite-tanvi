@@ -31,10 +31,10 @@
 
 
 
-                        {{ \App\Http\Controllers\Auth\LoginController::handleProviderCallback1() }}
+
                     You are logged in!
-
-
+                        @section('Name', Auth::user()->name)
+                        {{ Auth::user()->name }}
 
                 </div>
 

@@ -60,6 +60,7 @@ class LoginController extends Controller
     public function handleProviderCallback()
     {
         $userSocial = Socialite::driver('facebook')->stateless()->user();
+        echo
 
         // check if user exists and log user in
 
@@ -98,16 +99,9 @@ class LoginController extends Controller
 
 
 
-        $newvar = dd($userSocial);
-        return $newvar;
+      //  $newvar = dd($userSocial);
+        // return $newvar;
     }
-    public static function handleProviderCallback1()
-    {
-        $userSocial1 = Socialite::driver('facebook')->stateless()->user();
 
-
-        // $newvar = dd($userSocial);
-        return view(dd($userSocial1));
-    }
 
 }
