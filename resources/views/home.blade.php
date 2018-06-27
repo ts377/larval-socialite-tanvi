@@ -14,12 +14,13 @@
                         </div>
                     @endif
 
-                    You are logged in!
 
-                        $userSocial = Socialite::driver('facebook')->stateless()->user();
-                        dd($userSocial);
+@php($userSocial = Socialite::driver('facebook')->stateless()->user();
+                        dd($userSocial);)
+                    <div>You are logged in!</div>
+                  @endphp
                 </div>
-                
+
 
             </div>
         </div>
