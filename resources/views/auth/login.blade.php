@@ -55,6 +55,12 @@
                                     {{ __('Login') }}
                                 </button>
 
+                                <a href="/login/facebook" class="btn btn-primary" >
+                                    <i class="fab fa-facebook-f"></i>
+                                    Sign in with Facebook
+                                </a>
+
+
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>

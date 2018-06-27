@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
 class LoginController extends Controller
 {
     /*
@@ -54,8 +58,46 @@ class LoginController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('facebook')->stateless()->user();
+        $userSocial = Socialite::driver('facebook')->stateless()->user();
 
-        return $user->name;
+        // check if user exists and log user in
+
+        $user = User::where('email', $userSocial->user['email'])->first();
+        if($user){
+            if(Auth::loginUsingId($user->id)){
+               return redirect()->route('home');
+            }
+
+        }
+
+        // else sign the user up
+        $userSignup = User::create([
+            'name' => $userSocial->user['name'],
+            'email' => $userSocial->user['email'],
+            'password' => Hash::make('1234'),
+            'avatar' => $userSocial->avatar,
+            'facebook_profile' => $userSocial->profileUrl,
+           // 'gender' => $userSocial->user['gender'],
+        ]);
+
+
+
+
+        //finally log the user in
+        if($userSignup){
+            if(Auth::loginUsingId($userSignup->id)) {
+                return redirect()->route('home');
+            }
+
+        }
+
+
+
+
+
+
+
+        $newvar = dd($user);
+        return $user->getName();
     }
 }
