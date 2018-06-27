@@ -39,8 +39,7 @@
                         {{ Auth::user()->email }}
                         {{ nl2br(e('Your Facebook Avatar: ')) }}
                         {{ Auth::user()->avatar }}
-                        {{ nl2br(e('Your Facebook Profile: ')) }}
-                        {{ Auth::user()->facebook_profile }}
+                        
                         <img src="{{ Auth::user()->avatar_url }}" alt="Facebook Avatar" height="64" width="64">
 
 

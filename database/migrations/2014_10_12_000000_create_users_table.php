@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
            // $table->string('avatar');
-            $table->string('facebook_profile');
+           // $table->string('facebook_profile');
            // $table->string('twitter_profile');
            // $table->string('github_profile');
            // $table->string('linkedin_profile');
