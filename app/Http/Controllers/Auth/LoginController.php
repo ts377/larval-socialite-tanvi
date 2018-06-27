@@ -63,8 +63,8 @@ class LoginController extends Controller
         $userSocial = Socialite::driver('facebook')->stateless()->user();
 
 
-        $fileContents = file_get_contents($userSocial->getAvatar());
-        File::put(public_path() . '/uploads/profile/' . $userSocial->getId() . ".jpg", $fileContents);
+       // $fileContents = file_get_contents($userSocial->getAvatar());
+      //  File::put(public_path() . '/uploads/profile/' . $userSocial->getId() . ".jpg", $fileContents);
 
         // check if user exists and log user in.
 

@@ -37,9 +37,7 @@
                        {{ Auth::user()->name}}
                         {{ nl2br(e('   Your Email ID:  ')) }}
                         {{ Auth::user()->email }}
-                        {{ nl2br(e('Your Facebook Avatar: ')) }}
-
-                        $picture = public_path('uploads/profile/' . $user->getId() . ".jpg");
+                        
 
 
 
