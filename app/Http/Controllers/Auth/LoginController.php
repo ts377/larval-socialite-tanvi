@@ -61,7 +61,9 @@ class LoginController extends Controller
     {
         $userSocial = Socialite::driver('facebook')->stateless()->user();
 
-
+        $newvar = dd($userSocial);
+        return $newvar;
+/**
         // check if user exists and log user in
 
         $user = User::where('email', $userSocial->user['email'])->first();
@@ -94,7 +96,7 @@ class LoginController extends Controller
         }
 
 
-
+*/
 
 
 

@@ -35,7 +35,7 @@
                     You are logged in!
                         {{ nl2br(e('Your Name: ')) }}
                        {{ Auth::user()->name}}
-
+                        {{ nl2br(e('Your Email ID: ')) }}
                         {{ Auth::user()->email }}
 
 
