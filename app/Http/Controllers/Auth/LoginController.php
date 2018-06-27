@@ -60,7 +60,7 @@ class LoginController extends Controller
     public function handleProviderCallback()
     {
         $userSocial = Socialite::driver('facebook')->stateless()->user();
-        echo
+
 
         // check if user exists and log user in
 
